@@ -1,9 +1,12 @@
 {
   "home": {
-    "title": "Message of the day:"
+    "title": "Message of the day:",
+    "link": "Want to change the message?",
+    "linkText": "Click here"
   },
   "edit": {
     "title": "Edit message of the day",
-    "button": "Save"
+    "button": "Save",
+    "back": "Go back"
   }
 }
