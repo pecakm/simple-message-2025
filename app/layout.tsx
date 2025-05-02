@@ -7,6 +7,8 @@ import './globals.css';
 
 import { StyledComponentsRegistry } from '@/lib/styled-components';
 
+import { ThemeProviders } from './themeProviders';
+
 const geist = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -29,7 +31,9 @@ export default async function RootLayout({
       <body className={geist.className}>
         <StyledComponentsRegistry>
           <NextIntlClientProvider>
-            {children}
+            <ThemeProviders>
+              {children}
+            </ThemeProviders>
           </NextIntlClientProvider>
         </StyledComponentsRegistry>
       </body>
