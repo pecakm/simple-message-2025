@@ -1,0 +1,9 @@
+{
+  "home": {
+    "title": "Message of the day:"
+  },
+  "edit": {
+    "title": "Edit message of the day",
+    "button": "Save"
+  }
+}
