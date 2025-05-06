@@ -1,11 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { Path } from '@/enums';
 
-import { Container, Title, Message, Error, LinkParagraph } from './pageContent.styled';
+import { Container, Title, Message, Error, LinkParagraph, Link } from './pageContent.styled';
 import { Props } from './pageContent.types';
 
 export default function PageContent({ message }: Props) {
