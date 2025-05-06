@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Today's Special Message! ✨",
+    "link": "Want to change the message?",
+    "linkText": "Click here",
+    "noMessageFound": "No message found"
+  },
+  "edit": {
+    "title": "Edit message of the day",
+    "label": "Your message",
+    "fieldRequired": "Field is required",
+    "fieldMaxLength": "Field must be less than 256 characters",
+    "button": "Save",
+    "back": "Go back"
+  }
+}
