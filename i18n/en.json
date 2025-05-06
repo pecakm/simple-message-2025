@@ -2,7 +2,8 @@
   "home": {
     "title": "Today's Special Message! ✨",
     "link": "Want to change the message?",
-    "linkText": "Click here"
+    "linkText": "Click here",
+    "noMessageFound": "No message found"
   },
   "edit": {
     "title": "Edit message of the day",

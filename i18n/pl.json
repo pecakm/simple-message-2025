@@ -2,7 +2,8 @@
   "home": {
     "title": "Dzisiejsza Wiadomość! ✨",
     "link": "Chcesz zmienić wiadomość?",
-    "linkText": "Kliknij tutaj"
+    "linkText": "Kliknij tutaj",
+    "noMessageFound": "Brak wiadomości"
   },
   "edit": {
     "title": "Edytuj wiadomość dnia",

@@ -7,7 +7,7 @@ export async function getMessage() {
   const message = await Message.findOne();
 
   if (!message) {
-    return { error: 'No message found' };
+    return { error: 'noMessageFound' };
   }
 
   return { content: message.content };

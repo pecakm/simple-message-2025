@@ -15,7 +15,7 @@ export default function PageContent({ message }: Props) {
     <MainContainer>
       <Title>{t('title')}</Title>
       {message.error ? (
-        <Error>{message.error}</Error>
+        <Error>{t(message.error)}</Error>
       ) : (
         <Message>{message.content}</Message>
       )}
