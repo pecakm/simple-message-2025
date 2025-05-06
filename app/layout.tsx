@@ -8,6 +8,8 @@ import './globals.css';
 import { StyledComponentsRegistry } from '@/lib/styled-components';
 
 import { ThemeProviders } from './themeProviders';
+import LanguageIcon from './languageIcon/languageIcon';
+import MainContainer from './mainContainer/mainContainer';
 
 const geist = Geist({
   variable: '--font-geist-sans',
@@ -32,7 +34,10 @@ export default async function RootLayout({
         <StyledComponentsRegistry>
           <NextIntlClientProvider>
             <ThemeProviders>
-              {children}
+              <MainContainer>
+                <LanguageIcon />
+                {children}
+              </MainContainer>
             </ThemeProviders>
           </NextIntlClientProvider>
         </StyledComponentsRegistry>
