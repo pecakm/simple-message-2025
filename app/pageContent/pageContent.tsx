@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 import { Path } from '@/enums';
 
-import { Container, Title, Message, LinkParagraph } from './pageContent.styled';
+import { Container, Title, Message, Error, LinkParagraph } from './pageContent.styled';
 import { Props } from './pageContent.types';
 
 export default function PageContent({ message }: Props) {
@@ -14,7 +14,11 @@ export default function PageContent({ message }: Props) {
   return (
     <Container>
       <Title>{t('title')}</Title>
-      <Message>{message}</Message>
+      {message.error ? (
+        <Error>{message.error}</Error>
+      ) : (
+        <Message>{message.content}</Message>
+      )}
       <LinkParagraph>
         {t('link')} <Link href={Path.Edit}>{t('linkText')}</Link>
       </LinkParagraph>

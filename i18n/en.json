@@ -6,6 +6,7 @@
   },
   "edit": {
     "title": "Edit message of the day",
+    "label": "Your message",
     "button": "Save",
     "back": "Go back"
   }

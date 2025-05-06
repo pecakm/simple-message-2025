@@ -1,3 +1,6 @@
 export type Props = {
-  message: string;
+  message: {
+    content?: string;
+    error?: string;
+  };
 };
