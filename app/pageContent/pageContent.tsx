@@ -3,9 +3,9 @@
 import { useTranslations } from 'next-intl';
 
 import { Path } from '@/enums';
-import { MainContainer, Title } from '@/components';
+import { MainContainer, Title, Link } from '@/components';
 
-import { Message, Error, LinkParagraph, Link } from './pageContent.styled';
+import { Message, Error, LinkParagraph } from './pageContent.styled';
 import { Props } from './pageContent.types';
 
 export default function PageContent({ message }: Props) {

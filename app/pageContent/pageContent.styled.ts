@@ -1,4 +1,3 @@
-import NextLink from 'next/link';
 import styled from 'styled-components';
 
 import { Breakpoint, Color } from '@/enums';
@@ -72,17 +71,5 @@ export const LinkParagraph = styled.p`
   @media ${Breakpoint.Tablet} {
     font-size: 1.1rem;
     margin-top: 1rem;
-  }
-`;
-
-export const Link = styled(NextLink)`
-  color: ${Color.Link};
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease-in-out;
-
-  &:hover {
-    color: ${Color.LinkHover};
-    text-decoration: underline;
   }
 `;

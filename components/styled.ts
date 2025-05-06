@@ -1,3 +1,6 @@
+'use client';
+
+import NextLink from 'next/link';
 import styled from 'styled-components';
 
 import { Breakpoint, Color } from '@/enums';
@@ -36,5 +39,17 @@ export const Title = styled.h1`
   @media ${Breakpoint.Tablet} {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+  }
+`;
+
+export const Link = styled(NextLink)`
+  color: ${Color.Link};
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: ${Color.LinkHover};
+    text-decoration: underline;
   }
 `;
