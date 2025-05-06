@@ -7,11 +7,12 @@ import { Form } from './form';
 import { PageContent } from './pageContent';
 
 export default function Edit() {
-  async function submitMessage(content: string) {
+  const submitMessage = async (content: string) => {
     'use server';
+    
     await updateMessage(content);
     redirect(Path.Home);
-  }
+  };
 
   return (
     <PageContent>

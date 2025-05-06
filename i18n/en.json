@@ -7,6 +7,7 @@
   "edit": {
     "title": "Edit message of the day",
     "label": "Your message",
+    "error": "Field is required",
     "button": "Save",
     "back": "Go back"
   }

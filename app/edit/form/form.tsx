@@ -1,28 +1,37 @@
 'use client';
 
-import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@mui/material';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
-import { Container } from './form.styled';
-import { Props } from './form.types';
+import { Container, Error } from './form.styled';
+import { FormData, Props } from './form.types';
+import { schema } from './form.schema';
 
 export default function Form({ submitMessage }: Props) {
   const t = useTranslations('edit');
-  const [content, setContent] = useState('');
 
-  const handleSubmit = () => {
-    submitMessage(content);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
+
+  const onSubmit = async (data: FormData) => {
+    submitMessage(data.content);
   };
 
   return (
-    <Container>
+    <Container onSubmit={handleSubmit(onSubmit)}>
       <TextField
         label={t('label')}
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
+        {...register('content')}
       />
-      <Button type="button" onClick={handleSubmit}>{t('button')}</Button>
+      {errors.content?.message && <Error>{t(errors.content.message)}</Error>}
+      <Button type="submit">{t('button')}</Button>
     </Container>
   );
 }
