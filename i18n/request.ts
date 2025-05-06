@@ -1,9 +1,12 @@
+import { cookies } from 'next/headers';
 import { getRequestConfig } from 'next-intl/server';
 
+import { CookieName } from '@/constants';
+import { CountryCode } from '@/enums';
+
 export default getRequestConfig(async () => {
-  // Provide a static locale, fetch a user setting,
-  // read from `cookies()`, `headers()`, etc.
-  const locale = 'en';
+  const cookieStore = await cookies();
+  const locale = cookieStore.get(CookieName.Language)?.value || CountryCode.EN;
  
   return {
     locale,

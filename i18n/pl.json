@@ -1,0 +1,15 @@
+{
+  "home": {
+    "title": "Dzisiejsza Wiadomość! ✨",
+    "link": "Chcesz zmienić wiadomość?",
+    "linkText": "Kliknij tutaj"
+  },
+  "edit": {
+    "title": "Edytuj wiadomość dnia",
+    "label": "Twoja wiadomość",
+    "fieldRequired": "To pole jest wymagane",
+    "fieldMaxLength": "Pole musi mieć mniej niż 256 znaków",
+    "button": "Zapisz",
+    "back": "Wróć"
+  }
+}
