@@ -6,11 +6,10 @@ import { getLocale } from 'next-intl/server';
 import './globals.css';
 
 import { StyledComponentsRegistry } from '@/lib/styled-components';
+// import { MainContainer } from '@/components';
 
 import { ThemeProviders } from './themeProviders';
 import LanguageIcon from './languageIcon/languageIcon';
-import MainContainer from './mainContainer/mainContainer';
-
 const geist = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -34,10 +33,10 @@ export default async function RootLayout({
         <StyledComponentsRegistry>
           <NextIntlClientProvider>
             <ThemeProviders>
-              <MainContainer>
+              {/* <MainContainer> */}
                 <LanguageIcon />
                 {children}
-              </MainContainer>
+              {/* </MainContainer> */}
             </ThemeProviders>
           </NextIntlClientProvider>
         </StyledComponentsRegistry>

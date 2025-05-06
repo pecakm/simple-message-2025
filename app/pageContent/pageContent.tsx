@@ -3,15 +3,16 @@
 import { useTranslations } from 'next-intl';
 
 import { Path } from '@/enums';
+import { MainContainer, Title } from '@/components';
 
-import { Container, Title, Message, Error, LinkParagraph, Link } from './pageContent.styled';
+import { Message, Error, LinkParagraph, Link } from './pageContent.styled';
 import { Props } from './pageContent.types';
 
 export default function PageContent({ message }: Props) {
   const t = useTranslations('home');
 
   return (
-    <Container>
+    <MainContainer>
       <Title>{t('title')}</Title>
       {message.error ? (
         <Error>{message.error}</Error>
@@ -21,6 +22,6 @@ export default function PageContent({ message }: Props) {
       <LinkParagraph>
         {t('link')} <Link href={Path.Edit}>{t('linkText')}</Link>
       </LinkParagraph>
-    </Container>
+    </MainContainer>
   );
 }
