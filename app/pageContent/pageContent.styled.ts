@@ -44,7 +44,7 @@ export const Message = styled.p`
   font-size: 1.1rem;
   line-height: 1.5;
   color: ${Color.Text};
-  background: white;
+  background: ${Color.White};
   padding: 1.25rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

@@ -1,11 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { Path } from '@/enums';
 
-import { Container } from './pageContent.styled';
+import { Container, Title, BackLink } from './pageContent.styled';
 import { Props } from './pageContent.types';
 
 export default function PageContent({ children }: Props) {
@@ -13,9 +12,9 @@ export default function PageContent({ children }: Props) {
 
   return (
     <Container>
-      <h1>{t('title')}</h1>
+      <Title>{t('title')}</Title>
       {children}
-      <Link href={Path.Home}>{t('back')}</Link>
+      <BackLink href={Path.Home}>{t('back')}</BackLink>
     </Container>
   );
 }

@@ -6,4 +6,5 @@ export enum Color {
   ErrorBorder = '#feb2b2',
   Link = '#4299e1',
   LinkHover = '#2b6cb0',
+  White = '#fff',
 }
