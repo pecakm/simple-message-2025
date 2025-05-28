@@ -2,6 +2,8 @@
 
 Set the message of the day that will be visible to the whole world! Until someone will change it... :)
 
+Live demo [here](https://simple-message-2025.vercel.app).
+
 The app was made with Next.js 15 and MongoDB.
 
 Copyright 2025 IT Pulse Mikołaj Pęcak. All rights reserved.
